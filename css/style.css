@@ -3,6 +3,9 @@ body {
   color: #333;
 }
 /* Typography */
+a {
+  text-decoration: none;
+}
 h1,
 h2,
 h3,
@@ -19,13 +22,25 @@ input[type="submit"],
 input[type="button"],
 button {
   -webkit-transition: color 0.3s ease-in, border-color 0.3s ease-in, background-color 0.3s ease-in, opacity 0.3s ease-in;
-          transition: color 0.3s ease-in, border-color 0.3s ease-in, background-color 0.3s ease-in, opacity 0.3s ease-in;
+  transition: color 0.3s ease-in, border-color 0.3s ease-in, background-color 0.3s ease-in, opacity 0.3s ease-in;
 }
 input[type="submit"],
 input[type="button"],
 button,
 .ba-button {
   display: inline-block;
+  color: #666;
+  font-family: 'OpenSans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  border: 1px solid #fc0;
+  padding: 5px 10px;
+}
+.ba-button:hover {
+  background: #FC0;
+  color: #fff;
 }
 input[type="text"],
 input[type="email"],
@@ -35,7 +50,7 @@ input[type="tel"],
 textarea,
 select {
   -webkit-transition: color 0.3s ease-in, border-color 0.3s ease-in, background-color 0.3s ease-in, opacity 0.3s ease-in;
-          transition: color 0.3s ease-in, border-color 0.3s ease-in, background-color 0.3s ease-in, opacity 0.3s ease-in;
+  transition: color 0.3s ease-in, border-color 0.3s ease-in, background-color 0.3s ease-in, opacity 0.3s ease-in;
 }
 /* Layout */
 .ba-container {
@@ -56,7 +71,7 @@ select {
 .slick-next {
   position: absolute;
   display: block;
-  height: 20px;
+  height: 60px;
   width: 20px;
   line-height: 0px;
   font-size: 0px;
@@ -68,6 +83,7 @@ select {
   padding: 0;
   border: none;
   outline: none;
+  fill:#fc0;
 }
 .slick-prev:hover,
 .slick-next:hover,
@@ -97,13 +113,13 @@ select {
   -moz-osx-font-smoothing: grayscale;
 }
 .slick-prev {
-  left: -25px;
+  left: -20px;
 }
 .slick-prev:before {
   content: "←";
 }
 .slick-next {
-  right: -25px;
+  right: 0;
 }
 .slick-next:before {
   content: "→";
@@ -115,11 +131,12 @@ select {
 .slick-dots {
   position: absolute;
   bottom: -45px;
+  left: 0;
+  right: 0;
   list-style: none;
   display: block;
   text-align: center;
   padding: 0;
-  width: 100%;
 }
 .slick-dots li {
   position: relative;
@@ -134,100 +151,186 @@ select {
   border: 0;
   background: transparent;
   display: block;
-  height: 20px;
-  width: 20px;
   outline: none;
   line-height: 0px;
   font-size: 0px;
   color: transparent;
   padding: 5px;
   cursor: pointer;
-}
-.slick-dots li button:hover,
-.slick-dots li button:focus {
-  outline: none;
-}
-.slick-dots li button:hover:before,
-.slick-dots li button:focus:before {
-  opacity: 1;
-}
-.slick-dots li button:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "•";
-  width: 20px;
-  height: 20px;
-  font-size: 6px;
-  line-height: 20px;
-  text-align: center;
-  color: #000000;
-  opacity: 0.25;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.slick-dots li.slick-active button:before {
-  color: #000000;
-  opacity: 0.75;
-}
-/* Team */
-.ba-team {
-  padding: 50px 0;
-  text-align: center;
-}
-.ba-team-slider {
-  padding: 0 25px;
-}
-.ba-crewman__info {
-  padding: 80px 40px 70px 80px;
-  border-left: 1px solid #ffcc00;
-}
-.ba-crewman__name {
-  font-size: 36px;
-}
-.ba-crewman__position {
-  font-family: "Raleway", Arial, sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-}
-.ba-crewman__photo img {
-  margin-left: auto;
-  margin-right: auto;
-}
-.ba-subtitle {
-  color: #898F8F;
-  font-family: "Raleway";
-  font-size: 18px;
-  font-weight: 500;
-  margin: 0;
-}
-.ba-title {
-  color: #ffcc00;
-  font-family: "Roboto";
-  font-size: 60px;
-  font-weight: 900;
-  margin: 0 0 50px;
-  text-transform: uppercase;
-  position: relative;
-}
-.ba-title:after {
-  display: block;
-  margin-top: 24px;
-  content: "";
-  max-width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  height: 1px;
-  background: #ffcc00;
-}
-.ba-title:before {
-  content: "";
-  width: 30px;
-  height: 20px;
-  background: #ffffff url(../img/icons/bonfire.svg) no-repeat 50%;
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
+  background-color: #fc0;
+  -webkit-border-radius: 50%; border-radius: 50%; }
+  .slick-dots li button:hover,
+  .slick-dots li button:focus {
+    outline: none;
+  }
+  .slick-dots li button:hover:before,
+  .slick-dots li button:focus:before {
+    opacity: 1;
+  }
+  .slick-dots li button:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "•";
+    width: 20px;
+    height: 20px;
+    font-size: 6px;
+    line-height: 20px;
+    text-align: center;
+    color: #000000;
+    opacity: 0.25;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .slick-dots li.slick-active button {
+    color: #000000;
+    opacity: 0.75;
+    background: transparent;
+    border: 1px solid #fc0;
+  }
+
+
+  .ba-social__link {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border: 2px solid #ccc;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    margin: 0 2px;
+  }
+  .ba-social__link:hover {
+    border-color: #333;
+  }
+  .ba-social__link:hover .ba-social__icon {
+    fill:#333;
+  }
+  .ba-social__icon {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    fill:#ccc;
+    -webkit-transition: fill .2s ease-in;
+    -moz-transition: fill .2s ease-in;
+    -ms-transition: fill .2s ease-in;
+    -o-transition: fill .2s ease-in;
+    transition: fill .2s ease-in;
+  }
+
+  /* Team */
+  .ba-team {
+    padding: 50px 0;
+    text-align: center;
+  }
+  .ba-team-slider {
+    padding: 0 25px;
+  }
+  .ba-crewman__info {
+    padding: 80px 40px 70px 80px;
+    border-left: 1px solid #ffcc00;
+  }
+  .ba-crewman__name {
+    font-size: 36px;
+  }
+  .ba-crewman__position {
+    font-family: "Raleway", Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+  }
+  .ba-crewman__photo {
+    border: 1px solid #ffcc00;
+    padding: 14px;
+    background: #FFF;
+    position: relative;
+    display: inline-block;
+  }
+  .ba-crewman__photo:before,
+  .ba-crewman__photo:after {
+    content: "";
+    display: block;
+    background:#fff;
+    position: absolute;
+    z-index:1;
+    margin: auto;
+  }
+  .ba-crewman__photo:before {
+    left: -4px;
+    right: -4px;
+    top: 0;
+    bottom: 0;
+    height: 50%;
+  }
+  .ba-crewman__photo:after {
+    left: 0;
+    right: 0;
+    top: -4px;
+    bottom: -4px;
+    width: 50%;
+  }
+  .ba-crewman__photo img {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ffcc00;
+    position: relative;
+    z-index: 2;
+  }
+  .ba-subtitle {
+    color: #898F8F;
+    font-family: "Raleway";
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+  }
+  .ba-title {
+    color: #ffcc00;
+    font-family: "Roboto";
+    font-size: 60px;
+    font-weight: 900;
+    margin: 0 0 50px;
+    text-transform: uppercase;
+    position: relative;
+  }
+  .ba-title:after {
+    display: block;
+    margin-top: 24px;
+    content: "";
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 1px;
+    background: #ffcc00;
+  }
+  .ba-title:before {
+    content: "";
+    width: 30px;
+    height: 20px;
+    background: #ffffff url(../img/icons/bonfire.svg) no-repeat 50%;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .ba-boxes {
+    background:url('../img/icons/boxes.png') no-repeat;
+    width: 50px;
+    height: 4px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+  hr {
+    width: 100px;
+    height: 1px;
+    background: #fc0;
+    border: none;
+    margin: 0 auto;
+  }
+  @media (max-width: 960px) {
+    .ba-crewman__info {
+      border-left: none;
+    }
+  }
+
