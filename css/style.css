@@ -245,6 +245,7 @@ select {
     background: #FFF;
     position: relative;
     display: inline-block;
+    margin-top: 80px;
   }
   .ba-crewman__photo:before,
   .ba-crewman__photo:after {
@@ -321,6 +322,7 @@ select {
     margin: 0 auto;
     margin-bottom: 25px;
   }
+
   hr {
     width: 100px;
     height: 1px;
